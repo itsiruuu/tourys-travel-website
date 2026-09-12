@@ -8,51 +8,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        pacifico: ['Pacifico', 'cursive'],
+                    },
+                    colors: {
+                        gold: '#f5b76a',
+                        gold2: '#f4a742',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-black text-white font-poppins m-0 p-0 box-border">
 
 <!-- HERO SECTION -->
-<section class="hero">
-    <nav class="navbar">
-        <div class="logo">TOURy's</div>
+<section class="h-screen bg-[url('/images/rectangle1.png.jpg')] bg-cover bg-center bg-no-repeat relative">
+    <nav class="flex justify-between items-center px-20 py-[30px]">
+        <div class="font-pacifico text-3xl text-white cursor-pointer relative transition-all duration-300
+                    after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gold after:left-0 after:-bottom-1.5 after:transition-all after:duration-300
+                    hover:text-gold hover:scale-105 hover:tracking-wider hover:after:w-full">
+            TOURy's
+        </div>
 
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Information</a></li>
-            <li><a href="#">Culture</a></li>
-            <li><a href="#">Contact</a></li>
+        <ul class="flex list-none gap-[35px]">
+            <li><a href="#" class="text-white no-underline text-sm relative transition-colors duration-300
+                    after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gold after:left-0 after:-bottom-1.5 after:transition-all after:duration-300
+                    hover:text-gold hover:after:w-full">Home</a></li>
+            <li><a href="#" class="text-white no-underline text-sm relative transition-colors duration-300
+                    after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gold after:left-0 after:-bottom-1.5 after:transition-all after:duration-300
+                    hover:text-gold hover:after:w-full">About Us</a></li>
+            <li><a href="#" class="text-white no-underline text-sm relative transition-colors duration-300
+                    after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gold after:left-0 after:-bottom-1.5 after:transition-all after:duration-300
+                    hover:text-gold hover:after:w-full">Information</a></li>
+            <li><a href="#" class="text-white no-underline text-sm relative transition-colors duration-300
+                    after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gold after:left-0 after:-bottom-1.5 after:transition-all after:duration-300
+                    hover:text-gold hover:after:w-full">Culture</a></li>
+            <li><a href="#" class="text-white no-underline text-sm relative transition-colors duration-300
+                    after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gold after:left-0 after:-bottom-1.5 after:transition-all after:duration-300
+                    hover:text-gold hover:after:w-full">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="hero-content">
-        <p class="small-text">EXPLORE THE NATURE BEAUTY</p>
-        <h1>
-            <strong>Discover</strong><br>
-            <span>Wonderful Indo Nesia</span>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[720px] text-left">
+        <p class="tracking-[4px] text-gold text-xs mb-2.5">EXPLORE THE NATURE BEAUTY</p>
+        <h1 class="text-[64px] leading-[1.2]">
+            <strong class="font-bold">Discover</strong><br>
+            <span class="font-light">Wonderful Indo Nesia</span>
         </h1>
     </div>
 </section>
 
 <!-- HOLIDAY SECTION -->
-<section class="holiday-wrapper">
-    <div class="holiday">
+<section class="min-h-screen flex justify-center items-center">
+    <div class="flex gap-[100px] items-center">
 
-        <div class="holiday-img">
-            <img src="/images/rectangle2.png.jpg" alt="Nature">
+        <div>
+            <img src="/images/rectangle2.png.jpg" alt="Nature" class="w-[520px] rounded-[4px]">
         </div>
 
-        <div class="holiday-text">
-            <p class="place">EAST NUSA TENGGARA</p>
+        <div>
+            <p class="text-gold tracking-[4px] text-xs mb-[15px]">EAST NUSA TENGGARA</p>
 
-            <h2>
+            <h2 class="text-[38px] leading-[1.3] mb-5">
                 HAVE YOU<br>
                 ENJOYED YOUR<br>
                 HOLIDAY?
             </h2>
 
-            <p class="desc">
+            <p class="text-sm leading-[1.8] text-[#cccccc] max-w-[480px] mb-[25px]">
                 You will be amazed if you take part in this sailing Komodo Island tour
                 package. So it is also mandatory for you, besides enjoying Komodo tourism
                 on Komodo Island, you also have to taste the marine tourism.
@@ -60,141 +94,149 @@
                 from other countries.
             </p>
 
-            <a href="#" class="read-more">READ MORE</a>
+            <a href="#" class="no-underline text-gold text-xs tracking-[3px] relative inline-block
+                    after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold after:left-0 after:-bottom-1 after:transition-all after:duration-300
+                    hover:after:w-full">READ MORE</a>
         </div>
 
     </div>
 </section>
+
 <!-- BROMO SECTION -->
-<section class="bromo">
-    <div class="bromo-content">
-        <p class="bromo-small">BROMO</p>
-        <h2>
+<section class="h-screen w-full relative flex items-center justify-center text-center overflow-hidden bg-cover bg-center bg-no-repeat
+        bg-[linear-gradient(to_bottom,rgba(0,0,0,0.65),rgba(0,0,0,0.35),rgba(0,0,0,0.85)),url('/images/bromo.jpg')]">
+    <div class="max-w-[900px] p-5 text-white z-[2]">
+        <p class="text-sm tracking-[6px] text-gold2 mb-5">BROMO</p>
+        <h2 class="text-[52px] font-bold leading-[1.3] mb-[25px]">
             STEADY YOUR STEPS, WE<br>
             WILL CLIMB TOGETHER!
         </h2>
-        <p class="bromo-desc">
-            Enjoying the vast expanse of the sea of sand, witnessing the splendor of Mount Semeru 
-            that soars into the sky, and gazing at the beauty of the sun moving out of its bed 
+        <p class="text-sm leading-[1.8] text-[#dddddd] max-w-[700px] mx-auto mb-[30px]">
+            Enjoying the vast expanse of the sea of sand, witnessing the splendor of Mount Semeru
+            that soars into the sky, and gazing at the beauty of the sun moving out of its bed
             is an unforgettable experience when visiting Bromo.
         </p>
-        <a href="#" class="read-more">READ MORE</a>
+        <a href="#" class="inline-block no-underline text-gold2 font-semibold tracking-[2px] transition-all duration-300
+                hover:text-white hover:-translate-y-[3px]">READ MORE</a>
     </div>
 </section>
-<section class="explore-cards">
+
+<!-- EXPLORE CARDS -->
+<section class="flex justify-center items-center gap-[60px] py-[120px]">
 
     <!-- Left Card -->
-    <div class="card">
-        <img src="/images/card1.png" alt="">
+    <div class="group relative w-[320px] overflow-hidden rounded-[4px]">
+        <img src="/images/card1.png" alt="" class="w-full h-[450px] object-cover block transition-transform duration-[600ms] group-hover:scale-105">
     </div>
 
     <!-- Center Card (Hover Effect) -->
-    <div class="card center-card">
-        <img src="/images/card2.jpeg" alt="">
+    <div class="group relative w-[320px] overflow-hidden rounded-[4px]">
+        <img src="/images/card2.jpeg" alt="" class="w-full h-[450px] object-cover block transition-transform duration-[600ms] group-hover:scale-105">
 
-        <div class="overlay">
-            <h4>EXPLORE</h4>
-            <p>
-                WHEN AN UNKNOWN PRINTER TOOK A GALLEY OF TYPE AND SCRAMBLED 
+        <div class="absolute inset-0 bg-black/70 flex flex-col justify-center items-center p-[30px] text-center opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100">
+            <h4 class="text-gold text-xl tracking-[2px] mb-[15px]">EXPLORE</h4>
+            <p class="text-xs leading-[1.6] text-[#dddddd] mb-5">
+                WHEN AN UNKNOWN PRINTER TOOK A GALLEY OF TYPE AND SCRAMBLED
                 IT TO MAKE A TYPE SPECIMEN BOOK.
             </p>
-            <a href="#">CLICK HERE</a>
+            <a href="#" class="text-white no-underline text-xs border-b border-white pb-0.5">CLICK HERE</a>
         </div>
     </div>
 
     <!-- Right Card -->
-    <div class="card">
-        <img src="/images/card3.png" alt="">
+    <div class="group relative w-[320px] overflow-hidden rounded-[4px]">
+        <img src="/images/card3.png" alt="" class="w-full h-[450px] object-cover block transition-transform duration-[600ms] group-hover:scale-105">
     </div>
 
 </section>
 
 <!-- CULTURE SECTION -->
-<section class="culture">
+<section class="min-h-screen flex justify-center items-center gap-[100px] px-20 py-20">
 
-    <div class="culture-text">
-        <p class="culture-small">INDONESIAN CULTURE</p>
-        <h2>
+    <div class="max-w-[480px]">
+        <p class="text-gold tracking-[4px] text-xs mb-[15px]">INDONESIAN CULTURE</p>
+        <h2 class="text-[38px] leading-[1.3] mb-5">
             OUR CULTURE HERE<br>
             IS VERY FRIENDLY<br>
             TO PEOPLE
         </h2>
-        <p>
+        <p class="text-sm leading-[1.8] text-[#cccccc] mb-[25px]">
             Known for his politeness, manners and gentleness. This becomes a characteristic
             when they mingle with other tribes and become basic traits that are passed down
             by their ancestors.
         </p>
-        <a href="#" class="read-more">READ MORE</a>
+        <a href="#" class="no-underline text-gold text-xs tracking-[3px] relative inline-block
+                after:content-[''] after:absolute after:w-0 after:h-px after:bg-gold after:left-0 after:-bottom-1 after:transition-all after:duration-300
+                hover:after:w-full">READ MORE</a>
     </div>
 
-    <div class="culture-img">
-        <img src="/images/culture.jpg" alt="">
+    <div>
+        <img src="/images/culture.jpg" alt="" class="w-[520px] h-auto rounded-[4px] object-cover">
     </div>
 
 </section>
-<!-- FONT AWESOME (Add inside <head>) -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 <!-- ================= FOOTER ================= -->
-<footer class="footer">
+<footer class="bg-[#0b0b0b] px-20 py-[60px] border-t border-[#222222]">
 
-    <div class="footer-container">
+    <div class="max-w-[1200px] mx-auto">
 
         <!-- Top Section -->
-        <div class="footer-top">
-            <div class="logo">
+        <div class="flex justify-between items-center mb-[50px]">
+            <div class="font-pacifico text-3xl text-white cursor-pointer relative transition-all duration-300
+                    after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gold after:left-0 after:-bottom-1.5 after:transition-all after:duration-300
+                    hover:text-gold hover:scale-105 hover:tracking-wider hover:after:w-full">
                 Toury's
             </div>
 
-            <div class="cta">
+            <div class="flex items-center">
                 <span>Ready To Explore?</span>
-                <a href="#" class="btn-start">Get Started</a>
+                <a href="#" class="bg-gold text-black no-underline px-[25px] py-2.5 rounded-[4px] text-sm font-semibold ml-5 transition-colors duration-300 hover:bg-white">Get Started</a>
             </div>
         </div>
 
         <!-- Middle Section -->
-        <div class="footer-middle">
+        <div class="flex justify-between items-start mb-10">
 
             <!-- Left Side -->
-            <div class="footer-left">
-                <h2>Let's Go On Vacation,<br>Make Your Day</h2>
+            <div>
+                <h2 class="text-[28px] leading-[1.4] mb-5">Let's Go On Vacation,<br>Make Your Day</h2>
 
-                <div class="social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div>
+                    <a href="#" class="text-white mr-[15px] text-lg transition-colors duration-300 hover:text-gold"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mr-[15px] text-lg transition-colors duration-300 hover:text-gold"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white mr-[15px] text-lg transition-colors duration-300 hover:text-gold"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
             <!-- Right Side Links -->
-            <div class="footer-links">
+            <div class="flex gap-20">
 
-                <div class="link-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Email Marketing</li>
-                        <li>Services</li>
-                        <li>Branding</li>
-                        <li>Offline</li>
+                <div>
+                    <h4 class="text-gold mb-[15px] text-base">Services</h4>
+                    <ul class="list-none">
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Email Marketing</li>
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Services</li>
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Branding</li>
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Offline</li>
                     </ul>
                 </div>
 
-                <div class="link-column">
-                    <h4>About</h4>
-                    <ul>
-                        <li>Our Story</li>
-                        <li>Benefits</li>
-                        <li>Term</li>
-                        <li>Career</li>
+                <div>
+                    <h4 class="text-gold mb-[15px] text-base">About</h4>
+                    <ul class="list-none">
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Our Story</li>
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Benefits</li>
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Term</li>
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Career</li>
                     </ul>
                 </div>
 
-                <div class="link-column">
-                    <h4>Help</h4>
-                    <ul>
-                        <li>FAQ'S</li>
-                        <li>Contact Us</li>
+                <div>
+                    <h4 class="text-gold mb-[15px] text-base">Help</h4>
+                    <ul class="list-none">
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">FAQ'S</li>
+                        <li class="text-[#aaaaaa] text-sm mb-2.5 cursor-pointer transition-colors duration-300 hover:text-white">Contact Us</li>
                     </ul>
                 </div>
 
@@ -203,7 +245,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         </div>
 
         <!-- Bottom -->
-        <div class="footer-bottom">
+        <div class="border-t border-[#222222] pt-5 text-xs text-[#666666]">
             <p>Terms & Conditions</p>
         </div>
 
